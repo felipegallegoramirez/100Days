@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <h1>Days completed:</h1>
+        <h1 id="a">1</h1>
+      </div>
+      <div>
+        <h1>Days completed:</h1>
+        <h1 id="b">1</h1>
+      </div>
+    </div>
+
+    <div id="grid" class="grid"></div>
+  </body>
+
+  <script>
+    var x = 1;
+    console.log("holas");
+    let title = document.querySelector("#a");
+    let title2 = document.querySelector("#b");
+    var red = document.querySelector("#grid");
+
+
+
+    function generate2(ra) {
+        setTimeout(() => {
+        let div = document.createElement("div");
+        div.classList.add("container");
+        if (ra <= x) {
+          div.classList.add("check");
+        }
+        let h2 = document.createElement("h2");
+        h2.innerText = "Day " + ra;
+        let h22 = document.createElement("h2");
+        h22.innerText = "Day " + ra;
+        div.appendChild(h2);
+        div.appendChild(h22);
+        red.appendChild(div);
+        if(ra<100){
+            generate2(ra+1)
+        }
+        }, 100);
+
+    }
+    generate2(1);
+
+    function Change(ra) {
+      setTimeout(() => {
+        title.innerText=ra
+        title2.innerText=ra
+        if(ra<x){
+            Change(ra+1)
+        }
+        
+      }, 100);
+    }
+    Change(0)
+  </script>
+</html>

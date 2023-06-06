@@ -1,0 +1,54 @@
+
+
+.main{
+    margin: 200px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+h1{
+    display: inline-block;
+    color: #0CBDCB;
+    font-size: 70px;
+    margin: 0px;
+}
+
+.main>div:first-child{
+    position: absolute;
+}
+
+.main>div:first-child>h1{
+    filter: blur(32px);
+}
+
+
+body{
+    background-color: #0E121E;
+}
+
+h2{
+    display: inline-block;
+    color: #FF0000;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 50px;
+    margin-top: 30px;
+    padding: 0px 80px;
+    place-items: center;
+    margin-bottom: 100px;
+}
+
+.check *{
+    color: #15EB51;
+}
+
+.container>h2:first-child{
+    position: absolute;
+    filter: blur(32px);
+}
